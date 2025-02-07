@@ -1,12 +1,17 @@
 package com.proyectosbeth;
 
 import javax.swing.*;
+import java.io.IOException;
 
-public class Inicio {
-    public static void main(String[] args) {
+public class Start {
+
+    public static void main(String[] args) throws IOException {
+
         int opcion_menu = -1;
 
-        String[] botones = {"1. Ver gatos","2. Salir"};
+        String[] botones = {"1. Ver gatos","2. Ver favoritos","3. Salir"};
+
+        CatService catService = new CatService();
 
         do {
             //menu principal
@@ -19,8 +24,13 @@ public class Inicio {
                 }
             }
 
+            Cats cats = new Cats();
             switch (opcion_menu){
                 case 0:
+                    catService.viewCats();
+                    break;
+                case 1:
+                    catService.viewCatsFavorite(cats.getApikey());
                     break;
                 default:
                     break;

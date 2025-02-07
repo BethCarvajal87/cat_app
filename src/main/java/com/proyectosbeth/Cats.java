@@ -1,18 +1,18 @@
 package com.proyectosbeth;
 
-public class Gatos {
+public class Cats {
 
-    int id;
+    String id;
     String url;
     String apikey= "live_x5cSeFjTZSvPspNjtAq3EIXQMeNGIZywA1IYv97gCeERaG0qFpl4ZcB3bC4vo890";
     String image;
 
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
